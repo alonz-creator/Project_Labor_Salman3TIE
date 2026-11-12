@@ -137,6 +137,19 @@
                     app:layout_columnWeight="1"
                     app:layout_gravity="fill_horizontal" />
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnToEleventh"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/material_dynamic_neutral30"
+                    android:text="Pertemuan 11"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="30dp"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
+
+
             </androidx.gridlayout.widget.GridLayout>
 
             <com.google.android.material.button.MaterialButton
