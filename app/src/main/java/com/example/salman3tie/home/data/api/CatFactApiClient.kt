@@ -1,5 +1,8 @@
 package com.example.salman3tie.home.data.api
 
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
 object CatFactApiClient {
     private const val BASE_URL = "https://catfact.ninja"
 
