@@ -190,16 +190,16 @@ class HomeFragment : Fragment() {
                     LinearLayoutManager(requireContext())
 
                 // Tampilan Horizontal
-                // binding.rvGallery.layoutManager =
-                //     LinearLayoutManager(
-                //         requireContext(),
-                //         LinearLayoutManager.HORIZONTAL,
-                //         false
-                //     )
+                binding.rvGallery.layoutManager =
+                    LinearLayoutManager(
+                         requireContext(),
+                         LinearLayoutManager.HORIZONTAL,
+                         false
+                     )
 
                 // Tampilan Grid
-                 binding.rvGallery.layoutManager =
-                     GridLayoutManager(requireContext(), 2)
+                 // binding.rvGallery.layoutManager =
+                    //  GridLayoutManager(requireContext(), 2)
 
             } catch (e: Exception) {
                 Log.e("PHOTO_ERROR", e.message ?: "Unknown error")
