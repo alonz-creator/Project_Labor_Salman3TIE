@@ -3,14 +3,17 @@ package com.example.salman3tie.home
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.example.salman3tie.AuthActivity
 import com.example.salman3tie.R
+import com.example.salman3tie.home.data.api.CatFactApiClient
 import com.example.salman3tie.databinding.FragmentHomeBinding
 import com.example.salman3tie.pertemuan_2.SecondActivity
 import com.example.salman3tie.pertemuan_3.ThirdActivity
@@ -18,6 +21,7 @@ import com.example.salman3tie.pertemuan_4.FourthActivity
 import com.example.salman3tie.pertemuan_5.FifthActivity
 import com.example.salman3tie.pertemuan_6.ProfileActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -91,6 +95,18 @@ class HomeFragment : Fragment() {
                     dialog.dismiss()
                 }
                 .show()
+        }
+        loadCatFact()
+    }
+    private fun loadCatFact() {
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                Log.e(tag= "RESULT", msg = response.toString())
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
         }
     }
 

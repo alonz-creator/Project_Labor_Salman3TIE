@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.salman3tie.R
 import com.example.salman3tie.databinding.ActivityEleventhBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -26,7 +27,7 @@ class EleventhActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Activity Tenth" // Ubah ke "Pertemuan 11" jika diinginkan
+            title = "Pertemuan 11"
             setDisplayHomeAsUpEnabled(true)
         }
 
@@ -41,30 +42,27 @@ class EleventhActivity : AppCompatActivity() {
             when (position) {
                 0 -> {
                     tab.text = "Tab A"
-                    //Tambah Icon
-                    //Tambah Badge Tanpa nomor (hanya titik)
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_home)
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
                 }
                 1 -> {
                     tab.text = "Tab B"
-                    //Tambah Icon
-
-                    //Tambah Badge dengan nomor
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_home)
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
                     badge.number = 5
                 }
                 2 -> {
-                    tab.text = "Tab C"
-                    //Tambah Icon
-
-                    //Tambah Badge dengan nomor
-                    val badge = tab.getOrCreateBadge()
-                    badge.isVisible = true
-                    badge.number = 5
+                    tab.text = "Produk"
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_home)
                 }
             }
         }.attach()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
