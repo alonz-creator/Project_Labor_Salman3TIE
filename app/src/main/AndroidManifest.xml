@@ -62,6 +62,12 @@
         <activity
             android:name=".message.tutorial.TutorialMessageActivity"
             android:exported="false"/>
+        <activity
+            android:name=".pertemuan12.NoteActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".pertemuan12.ProductCrudActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

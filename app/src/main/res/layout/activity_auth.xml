@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="100dp"
-        android:layout_height="150dp"
+        android:layout_height="120dp"
         android:contentDescription="@string/cd_smartphone"
         android:src="@drawable/ic_mobile"
         app:layout_constraintBottom_toTopOf="@+id/textTitleAuth"
@@ -25,7 +25,7 @@
         android:id="@+id/textTitleAuth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/monsterrat_black"
         android:text="@string/title_auth"
         android:textColor="@color/text_dark"
@@ -45,17 +45,34 @@
         android:text="@string/subtitle_auth"
         android:textColor="@color/abu_gelap"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputUsername"
+        app:layout_constraintBottom_toTopOf="@+id/inputName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTitleAuth" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:hint="Nama Lengkap (khusus Register)"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="@color/text_dark"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/inputUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSubtitleAuth" />
 
     <EditText
         android:id="@+id/inputUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:autofillHints="username"
         android:gravity="center"
         android:hint="@string/hint_username"
@@ -65,14 +82,14 @@
         app:layout_constraintBottom_toTopOf="@+id/inputPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSubtitleAuth" />
+        app:layout_constraintTop_toBottomOf="@+id/inputName" />
 
     <EditText
         android:id="@+id/inputPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:autofillHints="password"
         android:gravity="center"
         android:hint="@string/hint_password"
@@ -89,15 +106,32 @@
         android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/dark_slate"
         android:text="@string/btn_login"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:cornerRadius="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textToggleAuth"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
+    <TextView
+        android:id="@+id/textToggleAuth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:text="Belum punya akun? Register di sini"
+        android:textColor="@color/color_p2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

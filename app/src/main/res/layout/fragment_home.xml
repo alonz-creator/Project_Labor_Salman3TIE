@@ -143,6 +143,30 @@
                     app:layout_columnWeight="1"
                     app:layout_gravity="fill_horizontal" />
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnP12Note"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/color_p2"
+                    android:text="CRUD Note"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="30dp"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnP12Product"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/color_p3"
+                    android:text="CRUD Produk"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="30dp"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
+
             </androidx.gridlayout.widget.GridLayout>
 
             <!-- Cat Fact -->

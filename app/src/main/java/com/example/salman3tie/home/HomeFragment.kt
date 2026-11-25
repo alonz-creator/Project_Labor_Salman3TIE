@@ -121,6 +121,26 @@ class HomeFragment : Fragment() {
             )
         }
 
+        // Navigasi ke CRUD Note (Pertemuan 12)
+        binding.btnP12Note.setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    com.example.salman3tie.pertemuan12.NoteActivity::class.java
+                )
+            )
+        }
+
+        // Navigasi ke CRUD Produk (Pertemuan 12)
+        binding.btnP12Product.setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    com.example.salman3tie.pertemuan12.ProductCrudActivity::class.java
+                )
+            )
+        }
+
         // Logout
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
