@@ -10,6 +10,7 @@ import com.example.salman3tie.home.HomeFragment
 import com.example.salman3tie.message.MessageFragment
 import com.example.salman3tie.more.MoreFragment
 import com.example.salman3tie.databinding.ActivityBaseBinding
+import com.example.salman3tie.note.NoteFragment
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -43,6 +44,10 @@ open class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else -> false
